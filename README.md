@@ -6,7 +6,15 @@ Rather than stopping at a chart, this project ends with a 17-page, client-ready 
 
 ## Overview
 
-Social Buzz is a social media platform where users react to posts with over 100 distinct reaction types (not just "like"), each carrying its own point value. The raw data — 1,000 posts and 25,553 reactions across three separate files — was messy: inconsistent category naming, missing values, a column-naming collision on merge, and an ambiguous date format. This project cleans and unifies that data, then answers the core business question with a ranked, validated result and supporting analysis of sentiment, content type, and timing.
+**The problem.** Social Buzz is a social media platform where users react to posts in more than 100 different ways — not just "like" — each worth a different number of points, across content spread over 16 categories. That data lived in three separate, messy files, and no one at the company had looked at it closely. Leadership had no evidence-based way to know which type of content was actually worth investing more in.
+
+**The task.** Turn that raw, disconnected data into one clear, defensible answer — which content categories earn the most positive engagement — and explain *why*, in a way a non-technical decision-maker could act on immediately.
+
+**The approach.** Each raw file was cleaned on its own (fixing inconsistent text formatting, removing incomplete rows), then joined into a single table using the columns they had in common. From there, total engagement was calculated per category, and supporting analysis was layered on top — sentiment, content type, and time patterns — to explain not just *which* categories win, but *how* and *why*. The results were compiled into 18 charts and a full written report.
+
+**Critical thinking.** A few things separate this from a surface-level chart-and-caption exercise. A year-over-year comparison that looked like a real decline was checked against the actual date range and shown to be a coverage artifact, not a real trend. A plausible-sounding hypothesis — that the top categories win by earning more enthusiastic reactions — was tested directly against the data, disproven, and corrected before it made it into the final report. Chart types (3D, pie charts) were chosen or avoided based on whether they represent the data honestly, not just on visual appeal.
+
+**The outcome.** A validated top-5 ranking, independently cross-checked against a separate analysis of the same dataset with an identical result, a full set of supporting visualizations, and a 17-page report written for a non-technical audience — the complete deliverable a real analytics engagement would produce, from raw files to final recommendation.
 
 *(Business scenario based on Accenture's "Social Buzz" case study.)*
 
