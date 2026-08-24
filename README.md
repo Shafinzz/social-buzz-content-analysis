@@ -71,11 +71,48 @@ Python · pandas · Matplotlib · Plotly · fpdf2
 
 ## How to Run
 
+**1. Make sure Python is installed** (version 3.9 or later).
+```
+python --version
+```
+If that doesn't work, install it from [python.org](https://www.python.org/downloads/).
+
+**2. Clone this repository and move into it**
+```
+git clone https://github.com/Shafinzz/social-buzz-content-analysis.git
+cd social-buzz-content-analysis
+```
+
+**3. (Optional but recommended) Create and activate a virtual environment**
+
+Keeps this project's packages separate from anything else on your machine.
+```
+python -m venv venv
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # macOS/Linux
+```
+
+**4. Install the required packages**
 ```
 pip install -r requirements.txt
-python content_analysis.py    # cleans the data, builds all 18 charts into charts/
-python generate_report.py     # builds the PDF report from those charts (run second)
 ```
+This installs pandas, Matplotlib, Plotly, Kaleido, and fpdf2 — everything both scripts need.
+
+**5. Run the analysis script**
+```
+python content_analysis.py
+```
+This cleans and merges the raw data, calculates the results, and generates all 18 charts into a new `charts/` folder. The top 5 categories print to the terminal as it runs.
+
+**6. Generate the PDF report**
+```
+python generate_report.py
+```
+Run this *after* step 5 — it builds the report from the charts that step just created. It produces `Social_Buzz_Content_Analysis_Report.pdf` in the project folder.
+
+**7. View the results**
+- Open `Social_Buzz_Content_Analysis_Report.pdf` for the full written report
+- Open any file in `charts/` for an individual chart — `.png` files are static images, `.html` files are interactive (open them in a browser and hover for exact values)
 
 ## Data Cleaning Notes
 

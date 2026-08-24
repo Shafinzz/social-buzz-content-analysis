@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.pyc
+venv/
 
 # AI assistant session notes -- not project documentation, not meant to be public
 CLAUDE.md
